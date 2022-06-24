@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32602.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aiub_Hand_To_Hand_MVC", "Aiub_Hand_To_Hand_MVC\Aiub_Hand_To_Hand_MVC.csproj", "{977AC2F9-B3F5-405D-AA8C-59E4E52BB41E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{977AC2F9-B3F5-405D-AA8C-59E4E52BB41E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{977AC2F9-B3F5-405D-AA8C-59E4E52BB41E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{977AC2F9-B3F5-405D-AA8C-59E4E52BB41E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{977AC2F9-B3F5-405D-AA8C-59E4E52BB41E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9B39B8C6-1808-45C6-B724-6A2D47B3E604}
+	EndGlobalSection
+EndGlobal
