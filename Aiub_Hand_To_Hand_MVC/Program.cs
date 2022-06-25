@@ -1,7 +1,21 @@
+
+using Aiub_Hand_To_Hand_MVC.Models.AccessFactory;
+using Aiub_Hand_To_Hand_MVC.Models.Data;
+using Microsoft.EntityFrameworkCore;
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+
+builder.Services.AddScoped<DataAccessFactory>();
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
 
 var app = builder.Build();
 
