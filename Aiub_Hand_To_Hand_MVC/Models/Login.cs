@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
+
 namespace Aiub_Hand_To_Hand_MVC.Models
 {
     public class Login
@@ -16,7 +17,7 @@ namespace Aiub_Hand_To_Hand_MVC.Models
         public string?  Username { get; set; }
         [Required]
         public string? Password { get; set; }
-        [Required]
+       
         public string? Picture { get; set; }
         
 

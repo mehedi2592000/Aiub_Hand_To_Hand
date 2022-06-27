@@ -16,7 +16,7 @@ namespace Aiub_Hand_To_Hand_MVC.Models.DataModel
         public string? Username { get; set; }
         [Required]
         public string? Password { get; set; }
-        [Required]
-        public string? Picture { get; set; }
+        
+        public IFormFile? Picture { get; set; }
     }
 }

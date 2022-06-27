@@ -1,13 +1,21 @@
 ﻿@model IEnumerable<Aiub_Hand_To_Hand_MVC.Models.Login>
+@using Microsoft.AspNetCore.Http
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>@HttpContextAccessor.HttpContext.Session.GetString("Username")</h1>
+
+<h1>@HttpContextAccessor.HttpContext.Session.GetInt32("Username1")</h1>
+
 
 <p>
     <a asp-action="Create">Create New</a>
+</p>
+<p>
+    <a asp-action="UserLogin">Login</a>
 </p>
 <table class="table">
     <thead>
@@ -61,9 +69,9 @@
                 @Html.DisplayFor(modelItem => item.Picture)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Edit", "Edit", new {  id=item.Id  }) |
+                @Html.ActionLink("EditSetting", "EditSetting", new {  id=item.Id  }) |
+                @Html.ActionLink("Delete", "Delete", new {  id=item.Id  })
             </td>
         </tr>
 }

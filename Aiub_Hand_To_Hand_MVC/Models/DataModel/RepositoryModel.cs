@@ -14,13 +14,15 @@ namespace Aiub_Hand_To_Hand_MVC.Models.DataModel
         [Required]
         public string? Title { get; set; }
         [Required]
-        public string? Pdf { get; set; }
+        public IFormFile Pdf { get; set; }
         [Required]
         public DateTime? Date { get; set; }
-        [Required]
+       
         public int? Count { get; set; }
-        [Required]
+       
         public string? Personal { get; set; }
+
+        public int LoginId { get; set; }
 
     }
 }

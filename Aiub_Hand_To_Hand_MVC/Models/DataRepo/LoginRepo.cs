@@ -28,8 +28,8 @@ namespace Aiub_Hand_To_Hand_MVC.Models.DataRepo
 
         public void Edit(Login item)
         {
-            var data = _context.Logins.Where(x => x.Id == item.Id).FirstOrDefault();
-            _context.Entry(data).State = EntityState.Modified;
+            //var data = _context.Logins.Where(x => x.Id == item.Id).FirstOrDefault();
+            _context.Entry(item).State = EntityState.Modified;
             _context.SaveChanges();
         }
 

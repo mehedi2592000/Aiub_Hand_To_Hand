@@ -47,7 +47,6 @@ namespace Aiub_Hand_To_Hand_MVC.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Picture")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Username")
@@ -68,7 +67,6 @@ namespace Aiub_Hand_To_Hand_MVC.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
 
                     b.Property<int?>("Count")
-                        .IsRequired()
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("Date")
@@ -83,7 +81,6 @@ namespace Aiub_Hand_To_Hand_MVC.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Personal")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Status")

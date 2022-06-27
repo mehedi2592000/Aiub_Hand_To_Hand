@@ -16,11 +16,12 @@ namespace Aiub_Hand_To_Hand_MVC.Models
         public string? Pdf { get; set; }
         [Required]
         public DateTime? Date { get; set; }
-        [Required]
+        
         public int? Count { get; set; }
-        [Required]
+        
         public string? Personal { get; set; }
 
+        public int LoginId { get; set; }
 
         public virtual Login Login { get; set; }
     }
