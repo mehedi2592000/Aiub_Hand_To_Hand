@@ -5,7 +5,9 @@ using Aiub_Hand_To_Hand_MVC.Models.DataModel;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Net.Mail;
 using System.Security.Claims;
+using System.Text;
 using IHostingEnvironment = Microsoft.AspNetCore.Hosting.IHostingEnvironment;
 
 namespace Aiub_Hand_To_Hand_MVC.Controllers
@@ -25,6 +27,12 @@ namespace Aiub_Hand_To_Hand_MVC.Controllers
             this.envio = envio;
             this._httpContextAccessor=_httpContextAccessor;
         }
+        string MailBody = "Wlcomwe to the questain";
+
+        string mailtitle = "Givr change";
+        string mailSubject = "Email with the";
+        string fromEmail = "bd34017053@gmail.com";
+        string password = "qiovdgghfkejmipa";
 
 
         [HttpGet]
@@ -92,9 +100,9 @@ namespace Aiub_Hand_To_Hand_MVC.Controllers
                     FileStream stream = new FileStream(fullpath, FileMode.Create);
                     lm.Picture.CopyTo(stream);
 
-                string d = HttpContext.Session.GetString("Username");
+               // string d = HttpContext.Session.GetString("Username");
               //  var dr = HttpContext.Session.GetString("Username");
-               int dw= HttpContext.Session.GetInt32("Username1").Value;
+               //int dw= HttpContext.Session.GetInt32("Username1").Value;
 
                 
 
@@ -105,12 +113,52 @@ namespace Aiub_Hand_To_Hand_MVC.Controllers
                     Instutue = lm.Instutue,
                     //Username = HttpContext.Session.GetString("Username"),
                     //Username= HttpContext.Session.GetString("Username"),
-                   Username=d,
+                   Username=lm.Username,
                     Password = lm.Password,
                     Picture = lm.Picture.FileName
 
                 };
                 _db.LoginDataAccessFactory().Add(data);
+                //EMail
+               
+
+                MailMessage message = new MailMessage(new MailAddress(fromEmail, mailtitle), new MailAddress(lm.Gmail));
+
+                StringBuilder sb = new StringBuilder();
+                sb.AppendFormat("<div class='row'>");
+                sb.AppendFormat("<div class='col-sm-4'>");
+                sb.AppendFormat("<div class='card'>");
+                sb.AppendFormat("<img src='{0}' class='card-img-top'>", lm.Picture);
+                sb.AppendFormat("<div class='card-body'>");
+                sb.AppendFormat("<h4 Card-title>{0} {1}</h4>", new object[] { lm.Username, lm.Password });
+                sb.AppendFormat("</div>");
+                sb.AppendFormat("</div>");
+                sb.AppendFormat("</div>");
+                sb.AppendFormat("</div>"); message.Subject = mailSubject;
+                message.Body = sb.ToString();
+                message.IsBodyHtml = true;
+
+                //message.Attachments.Add(new Attachment(filetoAttach.OpenReadStream(), filetoAttach.FileName));
+
+                //if (lm.Picture != null) { }
+                //message.Attachments.Add(new Attachment("Password", lm.Password));
+                message.Attachments.Add(new Attachment(lm.Picture.OpenReadStream(), lm.Picture.FileName));
+                    
+
+
+                SmtpClient smtp = new SmtpClient();
+                smtp.Host = "smtp.gmail.com";
+                smtp.Port = 587;
+                smtp.EnableSsl = true;
+                smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+
+                System.Net.NetworkCredential credential = new System.Net.NetworkCredential();
+                credential.UserName = fromEmail;
+                credential.Password = password;
+                smtp.UseDefaultCredentials = false;
+                smtp.Credentials = credential;
+                smtp.Send(message);
+
                 return RedirectToAction("Index");
             }
             else
