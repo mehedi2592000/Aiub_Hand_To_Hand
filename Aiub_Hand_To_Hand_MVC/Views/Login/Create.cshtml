@@ -1,5 +1,5 @@
 ﻿@model Aiub_Hand_To_Hand_MVC.Models.DataModel.LoginModel
-
+<!--
 <h4>LoginModel</h4>
 <hr />
 <div class="row">
@@ -47,7 +47,147 @@
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
+-->
+<!--
+<section class="vh-100 bg-image"
+  style="background-image: url('@Url.Content("~/wwwroot/Pic/logo.jpg")');">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">Create an account</h2>
 
+              <form>
+
+                <div class="form-outline mb-4">
+                  <input type="text" id="form3Example1cg" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example1cg">Your Name</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="email" id="form3Example3cg" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example3cg">Your Email</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="password" id="form3Example4cg" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example4cg">Password</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="password" id="form3Example4cdg" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example4cdg">Repeat your password</label>
+                </div>
+
+                <div class="form-check d-flex justify-content-center mb-5">
+                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
+                  <label class="form-check-label" for="form2Example3g">
+                    I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
+                  </label>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                  <button type="button"
+                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
+                </div>
+
+                <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="#!"
+                    class="fw-bold text-body"><u>Login here</u></a></p>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+
+<section class="vh-100">
+  <div class="container py-5 h-100">
+    <div class="row d-flex align-items-center justify-content-center h-100">
+      
+      <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+          <h1>Regestration From</h1>
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gmail" class="control-label"></label>
+                <input asp-for="Gmail" class="form-control" />
+                <span asp-validation-for="Gmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Instutue" class="control-label"></label>
+                <input asp-for="Instutue" class="form-control" />
+                <span asp-validation-for="Instutue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Username" class="control-label"></label>
+                <input asp-for="Username" class="form-control" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" onclick="enable()"/>
+                  <label class="form-check-label" for="form2Example3g">
+                    Do YOu want to add your profile Picture
+                  </label>
+                </div>
+                
+              <div class="form-group">
+                <!--<label asp-for="Picture" class="control-label"></label>-->
+                <input  hidden="true" id="pp" type="file" asp-for="Picture"placeholder="Profile Picture" class="form-control" />
+                <span asp-validation-for="Picture" class="text-danger"></span>
+            </div>
+                
+            <div class="form-group">
+                <input type="submit"  value="Create" class="btn btn-primary" />
+            </div>
+
+            <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="#!"
+                    class="fw-bold text-body"><u>Login here</u></a></p>
+        </form>   
+
+
+               
+      </div>
+      <div class="col-md-8 col-lg-7 col-xl-6" >
+        <img src="~/wwwroot/Pic/logo1.jpg"  class="img-fluid"  alt="Phone image">
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+function enable()
+{
+    var check=document.getElementById("form2Example3cg");
+    var ss=document.getElementById("pp");
+    if (check.checked) {
+        ss.removeAttribute("hidden");
+    }
+    else
+    {
+        ss.hidden = "true";
+    }
+
+}
+</script>
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

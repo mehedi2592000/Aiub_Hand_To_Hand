@@ -1,5 +1,5 @@
 ﻿@model Aiub_Hand_To_Hand_MVC.Models.Login
-
+<!--
 <h4>Login</h4>
 <hr />
 <div class="row">
@@ -29,9 +29,61 @@
     <a asp-action="Index">Back to List</a>
 </div>
 
-<p>
-    @ViewBag.userId
-</p>
+
+-->
+
+
+
+<section class="vh-100">
+  <div class="container py-5 h-100">
+    <div class="row d-flex align-items-center justify-content-center h-100">
+      <div class="col-md-8 col-lg-7 col-xl-6" >
+        <img src="~/wwwroot/Pic/logo.jpg"  class="img-fluid"  alt="Phone image">
+      </div>
+      <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+        
+          <form asp-action="UserLogin">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <div class="form-group">
+                <label asp-for="Username" class="control-label"></label>
+                <input asp-for="Username" class="form-control" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+          <!-- Submit button -->
+          
+
+          <div class="divider d-flex align-items-center my-4">
+            <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
+          </div>
+
+          <a class="btn btn-primary btn-lg btn-block" style="background-color: #3b5998" href="#!"
+            role="button">
+            <i class="fa fa-user-plus me-2" aria-hidden="true"></i> Regester your Account
+          </a>
+          
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

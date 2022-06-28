@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = E:\Project\Project_In_Dot_net_and_Core\Aiub_Hand_To_Hand_MVC\Aiub_Hand_To_Hand_MVC
 build_property._RazorSourceGeneratorDebug = 
 
+[E:/Project/Project_In_Dot_net_and_Core/Aiub_Hand_To_Hand_MVC/Aiub_Hand_To_Hand_MVC/Views/Dashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Project/Project_In_Dot_net_and_Core/Aiub_Hand_To_Hand_MVC/Aiub_Hand_To_Hand_MVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -37,6 +41,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/Project/Project_In_Dot_net_and_Core/Aiub_Hand_To_Hand_MVC/Aiub_Hand_To_Hand_MVC/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project/Project_In_Dot_net_and_Core/Aiub_Hand_To_Hand_MVC/Aiub_Hand_To_Hand_MVC/Views/Login/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cUHJvZmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Project/Project_In_Dot_net_and_Core/Aiub_Hand_To_Hand_MVC/Aiub_Hand_To_Hand_MVC/Views/Login/UserLogin.cshtml]

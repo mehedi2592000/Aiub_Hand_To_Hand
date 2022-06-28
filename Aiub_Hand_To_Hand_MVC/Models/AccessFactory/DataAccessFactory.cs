@@ -23,5 +23,10 @@ namespace Aiub_Hand_To_Hand_MVC.Models.AccessFactory
             return new RepositoryRepo(_context);
         }
 
+        public LoginIRrepository<Login>LOginCheckDataAccess()
+        {
+            return new CheckRepo(_context);
+        }
+
     }
 }

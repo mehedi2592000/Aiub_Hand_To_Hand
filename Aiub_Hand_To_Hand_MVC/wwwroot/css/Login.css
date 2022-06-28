@@ -1,0 +1,17 @@
+﻿namespace Aiub_Hand_To_Hand_MVC.wwwroot.css
+{
+    public class Login
+      /*login csss*/
+    .divider:after,
+    .divider:before
+        {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #eee;
+
+        }
+
+        /*Regestration CSS*/
+
+}
