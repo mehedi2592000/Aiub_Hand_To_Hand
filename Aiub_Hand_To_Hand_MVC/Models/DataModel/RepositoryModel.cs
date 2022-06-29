@@ -15,7 +15,9 @@ namespace Aiub_Hand_To_Hand_MVC.Models.DataModel
         public string? Title { get; set; }
         [Required]
         public IFormFile Pdf { get; set; }
-       
+
+        
+
         public DateTime? Date { get; set; }
        
         public int? Count { get; set; }

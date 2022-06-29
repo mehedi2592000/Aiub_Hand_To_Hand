@@ -6,7 +6,7 @@
     <div class="col-md-4">
         <form asp-action="Create" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-           
+            
             <div class="form-group">
                 <label asp-for="Subject" class="control-label"></label>
                 <input asp-for="Subject" class="form-control" />
@@ -14,7 +14,10 @@
             </div>
             <div class="form-group">
                 <label asp-for="Status" class="control-label"></label>
-                <input asp-for="Status" class="form-control" />
+                
+                <input type="radio" name="Status" value="Public" id="form2Example3c" onclick="enable()" />Public
+                <input type="radio" name="Status" value="Private" id="form2Example3cg" onclick="enable()" />Private
+
                 <span asp-validation-for="Status" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -23,12 +26,23 @@
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
            
-            
-            
-             <div class="form-group">
+            <div class="form-group">
                 <label asp-for="Pdf" class="control-label"></label>
                 <input type="file" asp-for="Pdf" class="form-control" />
                 <span asp-validation-for="Pdf" class="text-danger"></span>
+            </div>
+            <!--
+             <div class="form-group">
+                  <input class="form-check-input me-2" type="checkbox" value="ook" id="form2Example3cg" onclick="enable()"/>
+                  <label class="form-check-label">
+                    Do YOu want to add your profile Picture
+                  </label>
+                </div>
+           -->
+             <div class="form-group">
+               <!-- <label asp-for="Personal" class="control-label"></label>-->
+                <input hidden="true" id="pp" asp-for="Personal" class="form-control" />
+                <span asp-validation-for="Personal" class="text-danger"></span>
             </div>
            
             <div class="form-group">
@@ -41,6 +55,23 @@
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
+<script>
+
+function enable()
+{
+    var check=document.getElementById("form2Example3cg");
+    var check1=document.getElementById("form2Example3c");
+    var ss=document.getElementById("pp");
+    if (check.checked) {
+        ss.removeAttribute("hidden");
+    }
+    else if(check1.checked)
+    {
+        ss.hidden = "true";
+    }
+
+}
+</script>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

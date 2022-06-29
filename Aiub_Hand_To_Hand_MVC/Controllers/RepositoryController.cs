@@ -32,6 +32,8 @@ namespace Aiub_Hand_To_Hand_MVC.Controllers
         [HttpGet]
         public IActionResult Create()
         {
+
+
             return View();
         }
 

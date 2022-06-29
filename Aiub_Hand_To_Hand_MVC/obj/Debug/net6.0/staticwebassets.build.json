@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4WtbJehW2qvjgFl5+jJVSfo+MXxvRKTn+ScxO0SZgM8=",
+  "Hash": "4FF8WglAQaqg30ZWdhlJW41fWBseB75MxZLHAVMgxZg=",
   "Source": "Aiub_Hand_To_Hand_MVC",
   "BasePath": "_content/Aiub_Hand_To_Hand_MVC",
   "Mode": "Default",
@@ -1868,6 +1868,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\PDF\\First (1).pdf"
+    },
+    {
+      "Identity": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\PDF\\First (2).pdf",
+      "SourceId": "Aiub_Hand_To_Hand_MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\",
+      "BasePath": "_content/Aiub_Hand_To_Hand_MVC",
+      "RelativePath": "PDF/First (2).pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\PDF\\First (2).pdf"
+    },
+    {
+      "Identity": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\PDF\\First (3).pdf",
+      "SourceId": "Aiub_Hand_To_Hand_MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\",
+      "BasePath": "_content/Aiub_Hand_To_Hand_MVC",
+      "RelativePath": "PDF/First (3).pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\PDF\\First (3).pdf"
     },
     {
       "Identity": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\PDF\\First (4).pdf",
