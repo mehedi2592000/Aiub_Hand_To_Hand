@@ -1,10 +1,12 @@
-﻿using Aiub_Hand_To_Hand_MVC.Models;
+﻿using Aiub_Hand_To_Hand_MVC.Data_Logic_LAyer;
+using Aiub_Hand_To_Hand_MVC.Models;
 using Aiub_Hand_To_Hand_MVC.Models.AccessFactory;
 using Aiub_Hand_To_Hand_MVC.Models.Data;
 using Aiub_Hand_To_Hand_MVC.Models.DataModel;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Dynamic;
 using System.Net.Mail;
 using System.Security.Claims;
 using System.Text;
@@ -77,7 +79,7 @@ namespace Aiub_Hand_To_Hand_MVC.Controllers
                 HttpContext.Session.SetString("Username", lm.Username);
                 // HttpContext.Session.SetString("Username1", p);
                 HttpContext.Session.SetInt32("Username1", p);
-                return RedirectToAction("Index");
+                return RedirectToAction("Profile");
                 // return View();
             }
             
@@ -284,11 +286,23 @@ namespace Aiub_Hand_To_Hand_MVC.Controllers
 
         public IActionResult Profile()
         {
-            string Uu = HttpContext.Session.GetString("Username");
-            var logins = _db.LoginDataAccessFactory().GetAll().Where(x=>x.Username.Equals(Uu));
-            return View(logins);
+              string Uu = HttpContext.Session.GetString("Username");
+            // var logins = _db.LoginDataAccessFactory().GetAll().Where(x=>x.Username.Equals(Uu));
+            //return View(logins);
+            var logins = _db.LoginDataAccessFactory().GetAll().Where(x => x.Username.Equals(Uu)); ;
+            List<Repository> repo = _db.RepositoryDataAccessFactory().GetAll();
+           // dynamic mymodel = new ExpandoObject();
+           // mymodel.log = logins;
+           // mymodel.repo = repo;
+
+          ViewData["Logins"] = logins;
+            ViewData["Repositories"] = repo;
+
+            return View();
 
         }
+
+        
     }
 }
 

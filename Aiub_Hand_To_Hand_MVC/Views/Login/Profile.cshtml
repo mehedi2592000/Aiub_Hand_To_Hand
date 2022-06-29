@@ -1,65 +1,68 @@
-﻿@model IEnumerable<Aiub_Hand_To_Hand_MVC.Models.Login>
+﻿
 
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Id)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Gmail)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Instutue)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Username)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Password)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Picture)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Gmail)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Instutue)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Username)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Password)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Picture)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new {  id=item.Id  }) |
-                @Html.ActionLink("Details", "Details", new {  id=item.Id  }) |
-                @Html.ActionLink("Delete", "Delete", new {  id=item.Id  })
-            </td>
-        </tr>
+
+
+@{
+
+   IEnumerable<Login> teachers = ViewData["Logins"] as IEnumerable<Login>;
+   IEnumerable<Repository> students = ViewData["Repositories"] as IEnumerable<Repository>;
 }
-    </tbody>
-</table>
+       <div class="row">
+           <div class="col-md-4">
+
+           </div>
+           <div class="col-md-8">
+              <nav class="navbar navbar-expand-sm navbar-dark bg-light ">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <a class="navbar-brand" href="#">Home</a>
+                <a class="navbar-brand text-danger" href="#">OK</a>
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                    aria-expanded="false" aria-label="Toggle navigation"></button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        
+                        
+                    <form class="form-inline my-2 my-lg-0 ">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
+
+           </div>
+
+       </div>
+
+
+
+<div class="row">
+    <div class="col-md-4">
+         @foreach (Login teacher in teachers)
+         {
+             <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="~/wwwroot/Pic/@teacher.Picture" alt="Card image cap Avatar">
+            <div class="card-body">
+            <p class="card-text">@teacher.Name
+            <br />
+            @teacher.Username</p>
+            </div>
+            </div>
+         }
+    </div>
+
+    <div class="col-md-8">
+        @foreach (Repository student in students)
+        {
+            <div class="card w-100">
+             <div class="card-body">
+            <h5 class="card-title">@student.Title</h5>
+                <p class="card-text">@student.Subject</p>
+                <p class="card-text">@student.Status</p>           
+            </div>
+            </div>
+        }
+    </div>
+</div>

@@ -51,8 +51,8 @@ namespace Aiub_Hand_To_Hand_MVC.Controllers
                     Status = lm.Status,
                     Title = lm.Title,
                     Pdf = lm.Pdf.FileName,
-                    Date = lm.Date,
-                    Count = lm.Count,
+                    Date = DateTime.Now,
+                    Count = 0,
                     Personal = lm.Personal,
                     LoginId=dw
 
