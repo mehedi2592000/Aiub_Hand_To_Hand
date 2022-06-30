@@ -262,3 +262,5 @@ E:\Project\Project_In_Dot_net_and_Core\Aiub_Hand_To_Hand_MVC\Aiub_Hand_To_Hand_M
 E:\Project\Project_In_Dot_net_and_Core\Aiub_Hand_To_Hand_MVC\Aiub_Hand_To_Hand_MVC\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 E:\Project\Project_In_Dot_net_and_Core\Aiub_Hand_To_Hand_MVC\Aiub_Hand_To_Hand_MVC\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 E:\Project\Project_In_Dot_net_and_Core\Aiub_Hand_To_Hand_MVC\Aiub_Hand_To_Hand_MVC\bin\Debug\net6.0\libman.json
+E:\Project\Project_In_Dot_net_and_Core\Aiub_Hand_To_Hand_MVC\Aiub_Hand_To_Hand_MVC\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+E:\Project\Project_In_Dot_net_and_Core\Aiub_Hand_To_Hand_MVC\Aiub_Hand_To_Hand_MVC\bin\Debug\net6.0\itextsharp.dll

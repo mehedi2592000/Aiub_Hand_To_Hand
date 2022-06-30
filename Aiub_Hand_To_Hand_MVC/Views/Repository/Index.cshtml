@@ -68,7 +68,19 @@
                 @Html.ActionLink("Details", "Details", new {  id=item.ID }) |
                 @Html.ActionLink("Delete", "Delete", new { id=item.ID })
             </td>
+            <td>
+                  <a class="btn btn-primary" href="~/PDF/@item.Pdf">Read now</a>
+            </td>
+            <td>
+               
+            @Html.ActionLink("GetPdf", "GetPdf", new { Pdf=item.Pdf })
+           
+               
+            </td>
         </tr>
 }
     </tbody>
 </table>
+
+
+            

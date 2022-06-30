@@ -2,8 +2,12 @@
 using Aiub_Hand_To_Hand_MVC.Models.AccessFactory;
 using Aiub_Hand_To_Hand_MVC.Models.Data;
 using Aiub_Hand_To_Hand_MVC.Models.DataModel;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 using Microsoft.AspNetCore.Mvc;
+using System.Reflection.Metadata;
 using IHostingEnvironment = Microsoft.AspNetCore.Hosting.IHostingEnvironment;
+using Document = iTextSharp.text.Document;
 
 namespace Aiub_Hand_To_Hand_MVC.Controllers
 {
@@ -70,6 +74,30 @@ namespace Aiub_Hand_To_Hand_MVC.Controllers
         {
             _db.RepositoryDataAccessFactory().Delete(id);
             return RedirectToAction("Index");
+        }
+
+        public IActionResult GetPdf(string Pdf)
+        {
+
+
+            var memory = PdfDemo(Pdf, "wwwroot\\PDF");
+            return File(memory.ToArray(), "application/pdf", Pdf);
+
+        }
+        public  MemoryStream PdfDemo(string filename,string uploadpath)
+        {
+            var path=Path.Combine(Directory.GetCurrentDirectory(),uploadpath, filename);
+            var memory = new MemoryStream();
+            if(System.IO.File.Exists(path))
+            {
+                var net = new System.Net.WebClient();
+                var data=net.DownloadData(path);
+                var content = new System.IO.MemoryStream(data);
+                memory = content;
+
+            }
+            memory.Position = 0;
+            return memory;
         }
     }
 }
