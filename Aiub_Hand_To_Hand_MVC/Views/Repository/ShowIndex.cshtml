@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Aiub_Hand_To_Hand_MVC.Models.Repository>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<div class="row">
+           <div class="col-md-10">
+
+           
+
+
+
+
+@foreach (var item in Model) {
+
+
+        <div class="card w-90">
+          <div class="card-body">
+            <h5 class="card-title"> @Html.DisplayFor(modelItem => item.Subject)
+            
+                 
+              <a class="btn btn-success float-right "@Html.ActionLink("GetPdf", "GetPdf", new { Pdf=item.Pdf })></a>
+              <a class="btn btn-primary float-right" href="~/PDF/@item.Pdf">Read now</a>
+            
+            </h5>
+            <p class="card-text">  @Html.DisplayFor(modelItem => item.Title)
+            <br />
+            Date: @Html.DisplayFor(modelItem => item.Date)
+            </p>
+            
+          </div>
+        </div>
+
+
+       
+}
+</div>
+           <div class="col-md-2">
+              <p>
+                  <div class="card w-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Search </h5>
+                             <p class="card-text">
+                                @using (Html.BeginForm("ShowIndex", "Repository",FormMethod.Get))
+                                {
+                                    <input type="text" name="name" placeholder="Enter Subject name..."/>
+                                    <input type="text" name="title" placeholder="Enter Title name..."/>
+                
+                                    <input type="submit" name="submit" value="Search"/>
+                                }
+                              </p>
+                     </div>
+                   </div>
+            </p>
+
+           </div>
+           
+</div>
+

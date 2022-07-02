@@ -32,6 +32,17 @@ namespace Aiub_Hand_To_Hand_MVC.Controllers
             return View(logins);
         }
 
+        public IActionResult ShowIndex(string name,string title)
+        {
+
+           
+            List<Repository> logins = _db.RepositoryDataAccessFactory().GetAll();
+            if(name!=null ||title!=null)
+            {
+                logins= _db.RepositoryDataAccessFactory().GetAll().Where(x=>x.Subject.Equals(name) || x.Title.Equals(title)).ToList();
+            }
+            return View(logins);
+        }
 
         [HttpGet]
         public IActionResult Create()
