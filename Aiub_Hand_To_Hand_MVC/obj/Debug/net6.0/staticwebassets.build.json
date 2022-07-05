@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4FF8WglAQaqg30ZWdhlJW41fWBseB75MxZLHAVMgxZg=",
+  "Hash": "5+VZX+ZjZZyrQlFf8zW1A9C0gNg2KcRekgIZTwx6usc=",
   "Source": "Aiub_Hand_To_Hand_MVC",
   "BasePath": "_content/Aiub_Hand_To_Hand_MVC",
   "Mode": "Default",
@@ -1817,6 +1817,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\PDF\\(L02) Data for Data Mining.pdf",
+      "SourceId": "Aiub_Hand_To_Hand_MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\",
+      "BasePath": "_content/Aiub_Hand_To_Hand_MVC",
+      "RelativePath": "PDF/(L02) Data for Data Mining.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\PDF\\(L02) Data for Data Mining.pdf"
+    },
+    {
+      "Identity": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\PDF\\(L03) Introduction to Classification (1).pdf",
+      "SourceId": "Aiub_Hand_To_Hand_MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\",
+      "BasePath": "_content/Aiub_Hand_To_Hand_MVC",
+      "RelativePath": "PDF/(L03) Introduction to Classification (1).pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\PDF\\(L03) Introduction to Classification (1).pdf"
     },
     {
       "Identity": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\PDF\\(L03) Introduction to Classification.pdf",

@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "taizhFdRY4Kr8wa/YGZgLsg3btTBC5uptRZav7IQ+fKz9l7FApjv4EkREVdZPeibqTYtZ72TVII2lboOnT1mxQ==",
+  "dgSpecHash": "39YAhjzrHYzQ7zA61zLOqi2vdpgHqMa+O9xvEje9cuHaJo7xFh2G63L0toGgF5ufoazF0YNKEZBls5alYhSjOg==",
   "success": true,
   "projectFilePath": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sadim\\.nuget\\packages\\bouncycastle\\1.8.9\\bouncycastle.1.8.9.nupkg.sha512",
+    "C:\\Users\\sadim\\.nuget\\packages\\devextreme.aspnet.data\\2.8.6\\devextreme.aspnet.data.2.8.6.nupkg.sha512",
     "C:\\Users\\sadim\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\sadim\\.nuget\\packages\\itextsharp\\5.5.13.3\\itextsharp.5.5.13.3.nupkg.sha512",
     "C:\\Users\\sadim\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

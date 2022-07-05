@@ -2,7 +2,73 @@
     ViewData["Title"] = "Home Page";
 }
 
+
+ <div class="form-group">
+      <label for="exampleSelect1" class="form-label mt-4">Example select</label>
+      <select class="form-select" id="exampleSelect1">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+
+
+
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+<input id="ID" value="show Graph" type="button"/>
+<br/>
+
+
+<canvas id="myChart" style="max-width:400px;max-height:430px;"></canvas>
+
+<script type="text/javascript">
+
+    $(function() 
+    {
+        $("#ID").click(function() {
+           
+            
+             $.ajax
+             ({
+                type: "POST",
+                url: "/Home/Indexee",
+                data: "",
+                contextType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: OnSuccessResult,
+                error: onerror
+             });
+
+        function OnSuccessResult(data) {
+            var _data = data;
+            var _chartlables = _data[0];
+            var _charData = _data[1];
+
+            var barColor = ["red", "green", "blue", "orange", "brown", "purple"];
+
+            new Chart("myChart", {
+                type: "bar",
+                data: {
+                    labels: _chartlables,
+                    datasets: [{
+                        backgroundColor: barColor,
+                        data: _charData
+                    }]
+                }
+            });
+
+        }
+
+        function onerror(err) {
+
+        }
+    });
+});
+
+
+</script>

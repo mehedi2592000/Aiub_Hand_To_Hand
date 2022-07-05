@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Reflection.Metadata;
 using IHostingEnvironment = Microsoft.AspNetCore.Hosting.IHostingEnvironment;
 using Document = iTextSharp.text.Document;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Aiub_Hand_To_Hand_MVC.Controllers
 {
@@ -47,7 +48,14 @@ namespace Aiub_Hand_To_Hand_MVC.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-
+            List<SelectListItem> cities = new()
+            {
+                new SelectListItem { Value = "COA", Text = "COA" },
+                new SelectListItem { Value = "DLC", Text = "DLC" },
+                new SelectListItem { Value = "MAth 5", Text = "MAth 5" },
+                new SelectListItem { Value = "ENG", Text = "ENG" }
+            };
+            ViewBag.cities = cities;
 
             return View();
         }
@@ -89,7 +97,11 @@ namespace Aiub_Hand_To_Hand_MVC.Controllers
 
         public IActionResult GetPdf(string Pdf)
         {
+            var lm = _db.RepositoryDataAccessFactory().GetAll().FirstOrDefault(xc => xc.Pdf.Contains(Pdf));
+            lm.Count +=1;
 
+           
+            _db.RepositoryDataAccessFactory().Edit(lm);
 
             var memory = PdfDemo(Pdf, "wwwroot\\PDF");
             return File(memory.ToArray(), "application/pdf", Pdf);

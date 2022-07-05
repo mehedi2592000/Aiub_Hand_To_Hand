@@ -3,4 +3,56 @@
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+
+<br/>
+
+
+<canvas id="myChart" style="max-width:400px;max-height:430px;"></canvas>
+
+<script type="text/javascript">
+
+    $(function() 
+    {
+       
+           
+            
+             $.ajax
+             ({
+                type: "POST",
+                url: "/Home/Indexee",
+                data: "",
+                contextType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: OnSuccessResult,
+                error: onerror
+             });
+
+        function OnSuccessResult(data) {
+            var _data = data;
+            var _chartlables = _data[0];
+            var _charData = _data[1];
+
+            var barColor = ["red", "green", "blue", "orange", "brown", "purple"];
+
+            new Chart("myChart", {
+                //type: "bar",
+                type: "pie",
+                data: {
+                    labels: _chartlables,
+                    datasets: [{
+                        backgroundColor: barColor,
+                        data: _charData
+                    }]
+                }
+            });
+
+        }
+
+        function onerror(err) {
+
+        }
+    
+});
+
+
+</script>
