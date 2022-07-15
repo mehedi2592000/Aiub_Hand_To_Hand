@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Aiub_Hand_To_Hand_MVC.Models.Login>
+@{
+    Layout="~/Views/Shared/_Settings.cshtml";
+}
+
+<table class="table">
+    
+    <tbody>
+@foreach (var item in Model) {
+
+    <div class="row">
+            <div class="col-md-8">
+                <tr>
+                    <th>Name</th>
+                    <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                </tr>
+                <tr>
+                    <th>Gmail</th>
+                     <td>
+                        @Html.DisplayFor(modelItem => item.Gmail)
+                    </td>
+                </tr>
+                <tr>
+                    <th>Instuate</th>
+                     <td>
+                        @Html.DisplayFor(modelItem => item.Instutue)
+                    </td>
+                </tr>
+                <tr>
+                    <th>Username</th>
+                     <td>
+                        @Html.DisplayFor(modelItem => item.Username)
+                    </td>
+                </tr>
+        </div>
+
+    <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+         
+         <img class="card-img-top" src="~/wwwroot/Pic/@item.Picture" alt="Card image cap Avatar" style="height:60vm">
+          <br><br>
+        </div>
+    </div>
+</div>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+    </tbody>
+</table>

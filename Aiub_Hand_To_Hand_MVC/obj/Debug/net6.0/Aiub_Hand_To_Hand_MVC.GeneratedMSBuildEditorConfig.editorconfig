@@ -19,12 +19,36 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/Project/Project_In_Dot_net_and_Core/Aiub_Hand_To_Hand_MVC/Aiub_Hand_To_Hand_MVC/Views/Home/Homee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb21lZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Project/Project_In_Dot_net_and_Core/Aiub_Hand_To_Hand_MVC/Aiub_Hand_To_Hand_MVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Project/Project_In_Dot_net_and_Core/Aiub_Hand_To_Hand_MVC/Aiub_Hand_To_Hand_MVC/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project/Project_In_Dot_net_and_Core/Aiub_Hand_To_Hand_MVC/Aiub_Hand_To_Hand_MVC/Views/Job/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project/Project_In_Dot_net_and_Core/Aiub_Hand_To_Hand_MVC/Aiub_Hand_To_Hand_MVC/Views/Job/DateJobList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iXERhdGVKb2JMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project/Project_In_Dot_net_and_Core/Aiub_Hand_To_Hand_MVC/Aiub_Hand_To_Hand_MVC/Views/Job/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project/Project_In_Dot_net_and_Core/Aiub_Hand_To_Hand_MVC/Aiub_Hand_To_Hand_MVC/Views/Job/JobListDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iXEpvYkxpc3REZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project/Project_In_Dot_net_and_Core/Aiub_Hand_To_Hand_MVC/Aiub_Hand_To_Hand_MVC/Views/Job/ShowJob.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iXFNob3dKb2IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Project/Project_In_Dot_net_and_Core/Aiub_Hand_To_Hand_MVC/Aiub_Hand_To_Hand_MVC/Views/Login/Create.cshtml]
@@ -47,12 +71,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cUHJvZmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/Project/Project_In_Dot_net_and_Core/Aiub_Hand_To_Hand_MVC/Aiub_Hand_To_Hand_MVC/Views/Login/Setting.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cU2V0dGluZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project/Project_In_Dot_net_and_Core/Aiub_Hand_To_Hand_MVC/Aiub_Hand_To_Hand_MVC/Views/Login/SettingProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cU2V0dGluZ1Byb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Project/Project_In_Dot_net_and_Core/Aiub_Hand_To_Hand_MVC/Aiub_Hand_To_Hand_MVC/Views/Login/UserLogin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cVXNlckxvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Project/Project_In_Dot_net_and_Core/Aiub_Hand_To_Hand_MVC/Aiub_Hand_To_Hand_MVC/Views/Repository/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3NpdG9yeVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project/Project_In_Dot_net_and_Core/Aiub_Hand_To_Hand_MVC/Aiub_Hand_To_Hand_MVC/Views/Repository/DeleteRepo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3NpdG9yeVxEZWxldGVSZXBvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Project/Project_In_Dot_net_and_Core/Aiub_Hand_To_Hand_MVC/Aiub_Hand_To_Hand_MVC/Views/Repository/Index.cshtml]
@@ -65,6 +101,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/Project/Project_In_Dot_net_and_Core/Aiub_Hand_To_Hand_MVC/Aiub_Hand_To_Hand_MVC/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Project/Project_In_Dot_net_and_Core/Aiub_Hand_To_Hand_MVC/Aiub_Hand_To_Hand_MVC/Views/Shared/_Settings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TZXR0aW5ncy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Project/Project_In_Dot_net_and_Core/Aiub_Hand_To_Hand_MVC/Aiub_Hand_To_Hand_MVC/Views/Shared/_ValidationScriptsPartial.cshtml]

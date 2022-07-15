@@ -3,6 +3,7 @@ using Aiub_Hand_To_Hand_MVC.Models;
 using Aiub_Hand_To_Hand_MVC.Models.AccessFactory;
 using Aiub_Hand_To_Hand_MVC.Models.Data;
 using Aiub_Hand_To_Hand_MVC.Models.DataModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -14,6 +15,7 @@ using IHostingEnvironment = Microsoft.AspNetCore.Hosting.IHostingEnvironment;
 
 namespace Aiub_Hand_To_Hand_MVC.Controllers
 {
+    
     public class LoginController : Controller
     {
 
@@ -92,7 +94,7 @@ namespace Aiub_Hand_To_Hand_MVC.Controllers
              HttpContext.Session.Remove("Username");
              
              HttpContext.Session.Remove("Username1");
-            return RedirectToAction("Index");
+            return RedirectToAction("UserLogin");
         }
         public IActionResult Index()
         {
@@ -198,7 +200,7 @@ namespace Aiub_Hand_To_Hand_MVC.Controllers
                 smtp.Credentials = credential;
                 smtp.Send(message);
 
-                return RedirectToAction("Index");
+                return RedirectToAction("UserLogin");
             }
             else
             {
@@ -230,7 +232,7 @@ namespace Aiub_Hand_To_Hand_MVC.Controllers
                     // Picture = new FormFile(s, 0, y, null, Path.GetFileName(s.Name))
 
                 };
-                return View(data);
+                return PartialView("Edit",data);
             
         }
         [HttpPost]
@@ -239,8 +241,8 @@ namespace Aiub_Hand_To_Hand_MVC.Controllers
             if (ModelState.IsValid)
             {
 
-                var fullpath = Path.Combine(envio.ContentRootPath, @"wwwroot\Pic\", lm.Picture.FileName);
-                FileStream stream = new FileStream(fullpath, FileMode.Create);
+               var fullpath = Path.Combine(envio.ContentRootPath, @"wwwroot\Pic\", lm.Picture.FileName);
+               FileStream stream = new FileStream(fullpath, FileMode.Create);
                 lm.Picture.CopyTo(stream);
 
                 var data = new Login()
@@ -256,15 +258,18 @@ namespace Aiub_Hand_To_Hand_MVC.Controllers
                 // _context.Entry(data).State = EntityState.Modified;
                 //_context.SaveChanges();
                 _db.LoginDataAccessFactory().Edit(data);
-                return RedirectToAction("Index");
+                // return PartialView("Edit", data);
+                 return RedirectToAction("Profile");
+
             }
             return RedirectToAction("Edit");
         }
 
         [HttpGet]
-        public IActionResult EditSetting(int id)
+        public IActionResult EditSetting()
         {
-            var lm = _db.LoginDataAccessFactory().GetId(id);
+            int dw = HttpContext.Session.GetInt32("Username1").Value;
+            var lm = _db.LoginDataAccessFactory().GetId(dw);
             return View(lm);
         }
 
@@ -273,35 +278,47 @@ namespace Aiub_Hand_To_Hand_MVC.Controllers
         {
             
             _db.LoginDataAccessFactory().Edit(lm);
-            return RedirectToAction("Index");
+            return RedirectToAction("Profile");
         }
 
 
         public IActionResult Delete(int id)
         {
             _db.LoginDataAccessFactory().Delete(id);
-            return RedirectToAction("Index");
+            return RedirectToAction("UserLogin");
         }
 
-
+        //[Authorize]
         public IActionResult Profile()
         {
               string Uu = HttpContext.Session.GetString("Username");
-            // var logins = _db.LoginDataAccessFactory().GetAll().Where(x=>x.Username.Equals(Uu));
-            //return View(logins);
-            var logins = _db.LoginDataAccessFactory().GetAll().Where(x => x.Username.Equals(Uu)); ;
-            List<Repository> repo = _db.RepositoryDataAccessFactory().GetAll();
-           // dynamic mymodel = new ExpandoObject();
-           // mymodel.log = logins;
-           // mymodel.repo = repo;
+            int dw = HttpContext.Session.GetInt32("Username1").Value;
 
+            var logins = _db.LoginDataAccessFactory().GetAll().Where(x => x.Username.Equals(Uu)); ;
+            List<Repository> repo = _db.RepositoryDataAccessFactory().GetAll().Where(x=>x.LoginId==dw).ToList();
+           
           ViewData["Logins"] = logins;
             ViewData["Repositories"] = repo;
 
             return View();
 
         }
+/*
+        public IActionResult Setting()
+        {
+            int dw = HttpContext.Session.GetInt32("Username1").Value;
+            var lm = _db.LoginDataAccessFactory().GetId(dw);
+            return View();
+        } */
 
+
+
+        public IActionResult SettingProfile()
+        {
+            int dw = HttpContext.Session.GetInt32("Username1").Value;
+           List<Login> logins = _db.LoginDataAccessFactory().GetAll().Where(x=>x.Id==dw).ToList();
+            return View(logins);
+        }
         
     }
 }

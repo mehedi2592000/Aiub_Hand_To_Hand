@@ -22,5 +22,6 @@ namespace Aiub_Hand_To_Hand_MVC.Models
         
 
         public virtual ICollection<Repository> Repositories { get; set; }
+        public virtual ICollection<Job> Jobs { get; set; }
     }
 }

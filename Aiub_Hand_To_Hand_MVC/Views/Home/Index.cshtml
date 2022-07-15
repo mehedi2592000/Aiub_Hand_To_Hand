@@ -3,34 +3,75 @@
 }
 
 
- <div class="form-group">
-      <label for="exampleSelect1" class="form-label mt-4">Example select</label>
-      <select class="form-select" id="exampleSelect1">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
+
+
+
+@{
+
+   IEnumerable<Login> teachers = ViewData["Logins"] as IEnumerable<Login>;
+   IEnumerable<Repository> students = ViewData["Repositories"] as IEnumerable<Repository>;
+}
+       <div class="row">
+           <div class="col-md-4">
+
+           </div>
+           <div class="col-md-8">
+              <nav class="navbar navbar-expand-sm navbar-dark bg-success ">
+                <a class="navbar-brand" href="~/Login/Profile">Profile</a>
+                <a class="navbar-brand" href="~/Repository/ShowIndex">All Upload</a>
+                <a class="navbar-brand" href="~/Home/Index">Graph</a>
+                <a class="navbar-brand text-danger" href="#">OK</a>
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                    aria-expanded="false" aria-label="Toggle navigation"></button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        
+                        
+                    <form class="form-inline my-2 my-lg-0 ">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
+
+           </div>
+
+       </div>
+
+
+
+<div class="row">
+    <div class="col-md-4">
+         @foreach (Login teacher in teachers)
+         {
+             <div class="card" style="width: 22rem;">
+            <img class="card-img-top rounded-circle" src="~/wwwroot/Pic/@teacher.Picture" alt="Card image cap Avatar" style="height:60vm">
+            
+            <div class="card-body">
+                <h5 class="card-title">@teacher.Name</h5>
+                <h6 class="card-subtitle mb-2 text-muted"> @teacher.Username</h6>
+                
+                <a class="btn btn-primary btn-lg btn-block" style="background-color: #3b5998" href="#!"
+            role="button">
+            <i class="fa fa-user-plus me-2" aria-hidden="true"></i> Profile Pic Setting
+          </a>
+                
+              </div>
+
+
+
+            </div>
+         }
     </div>
 
-
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
-<input id="ID" value="show Graph" type="button"/>
-<br/>
-
-
-<canvas id="myChart" style="max-width:400px;max-height:430px;"></canvas>
+    <div class="col-md-8">
+        <canvas id="myChart" style="max-width:600px;max-height:900px;"></canvas>
 
 <script type="text/javascript">
 
     $(function() 
     {
-        $("#ID").click(function() {
+        
            
             
              $.ajax
@@ -67,8 +108,77 @@
         function onerror(err) {
 
         }
-    });
+   
 });
 
 
 </script>
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+
+
+<canvas id="myChart" style="max-width:400px;max-height:430px;"></canvas>
+
+<script type="text/javascript">
+
+    $(function() 
+    {
+        
+           
+            
+             $.ajax
+             ({
+                type: "POST",
+                url: "/Home/Indexee",
+                data: "",
+                contextType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: OnSuccessResult,
+                error: onerror
+             });
+
+        function OnSuccessResult(data) {
+            var _data = data;
+            var _chartlables = _data[0];
+            var _charData = _data[1];
+
+            var barColor = ["red", "green", "blue", "orange", "brown", "purple"];
+
+            new Chart("myChart", {
+                type: "bar",
+                data: {
+                    labels: _chartlables,
+                    datasets: [{
+                        backgroundColor: barColor,
+                        data: _charData
+                    }]
+                }
+            });
+
+        }
+
+        function onerror(err) {
+
+        }
+   
+});
+
+
+</script>-->

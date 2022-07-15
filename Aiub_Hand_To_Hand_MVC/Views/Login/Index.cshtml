@@ -12,12 +12,16 @@
 
 
 <p>
+    <div id="PlaceholderHere"></div>
+
     <a asp-action="Create">Create New</a>
+    <button type="button" class="btn btn-primary" data-toggle="ajax-modal" data-target="#addEmployee"
+    data-url="@Url.Action("Create")">Createe</button>
 </p>
 <p>
     <a asp-action="UserLogin">Login</a>
 </p>
-<table class="table">
+<table class="table table table-striped">
     <thead>
         <tr>
             <th>

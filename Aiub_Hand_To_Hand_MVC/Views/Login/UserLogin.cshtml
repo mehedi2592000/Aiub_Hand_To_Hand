@@ -52,12 +52,13 @@
             </div>
             <div class="form-group">
                 <label asp-for="Password" class="control-label"></label>
-                <input asp-for="Password" class="form-control" />
+                <input type="password" asp-for="Password" class="form-control" />
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
             
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+               
+                <input type="submit" value="SignIn Account" class="btn btn-success btn-lg btn-block" style="background-color: green" />
             </div>
           <!-- Submit button -->
           
@@ -66,9 +67,9 @@
             <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
           </div>
 
-          <a class="btn btn-primary btn-lg btn-block" style="background-color: #3b5998" href="#!"
+          <a class="btn btn-primary btn-lg btn-block" style="background-color: #3b5998" href="~/Login/Create"
             role="button">
-            <i class="fa fa-user-plus me-2" aria-hidden="true"></i> Regester your Account
+            <i class="fa fa-user-plus me-2" aria-hidden="true"></i> SignUp Account
           </a>
           
 

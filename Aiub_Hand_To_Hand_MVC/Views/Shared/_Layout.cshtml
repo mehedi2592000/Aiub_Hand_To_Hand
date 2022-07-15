@@ -7,43 +7,180 @@
     
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/Login.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Hom.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Job.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/lib/font-awesome/css/all.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Aiub_Hand_To_Hand_MVC.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Aiub_Hand_To_Hand_MVC</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Index">Login Index</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Repository" asp-action="Index">Repository</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Dashboard" asp-action="Index">Repository</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Logout">Logout</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+
+        
+     @{ var Uu = Context.Session.GetString("Username"); 
+
+        if(Uu==null){
+                <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Aiub_Hand_To_Hand_MVC</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                            <ul class="navbar-nav flex-grow-1">
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" href="~/Home/Homee/#hero" >Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" href="~/Home/Homee/#features">Features</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" href="~/Home/Homee/#contact" >Contact</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" href="~/Home/Homee/#footer" >Footer</a>
+                                </li>
+                                <ul class="navbar-nav ml-auto">
+                                <li class="nav-item ">
+                                <a class="btn btn-primary" asp-controller="Login" asp-action="UserLogin">SignIn</a>
+                                
+                                </li>
+                                <li class="nav-item ">
+                                <a class="btn btn-success" asp-controller="Login" asp-action="Create">SignUp</a>
+                                
+                                </li>
+                                </ul>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+        }
+        
+
+        if(Uu!=null)
+        {
+                     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Aiub_Hand_To_Hand_MVC</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                            <ul class="navbar-nav m-auto">
+                                <li class="nav-item">
+                                 <form class="form-inline my-2 my-lg-0 ">
+                                  <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                </form>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Note</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Get Star</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action=""></a>
+                                </li>
+                               
+                                 <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action=""></a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action=""></a>
+                                </li>
+                                 <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action=""></a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action=""></a>
+                                </li>
+                                 <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action=""></a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action=""></a>
+                                </li>
+                                 <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action=""></a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action=""></a>
+                                </li>
+                                 <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action=""></a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action=""></a>
+                                </li>
+                                 <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action=""></a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action=""></a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action=""></a>
+                                </li>
+                                 <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action=""></a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action=""></a>
+                                </li>
+                                 <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action=""></a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action=""></a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action=""></a>
+                                </li>
+                                 <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action=""></a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action=""></a>
+                                </li>
+                               
+                                  <li class="nav-item dropdown">
+                                  <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <i class="fa fa-plus" aria-hidden="true"></i></a>
+                                  <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                   <a class="dropdown-item" href="~/Repository/Create"><i class="fa fa-plus-square" aria-hidden="true"></i>Add Repository</a>
+                                   <a class="dropdown-item" href="~/Job/Create"><i class="fa fa-suitcase" aria-hidden="true"></i>Add Job</a>
+                                  </div>
+                                 </li>
+
+                                  <li class="nav-item">
+                                     <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action=""></a>
+                                </li>
+                               
+                                 <li class="nav-item dropdown">
+                                  <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <i class="fa fa-user" aria-hidden="true"></i></a>
+                                  <div class="dropdown-menu" aria-labelledby="dropdownId">
+                               
+                                   <a class="dropdown-item" href="~/Login/Profile"><i class="fa fa-user" aria-hidden="true"></i>your Profile</a>
+                                   <a class="dropdown-item" href="~/Repository/ShowIndex"><i class="fa fa-file" aria-hidden="true"></i> Repository </a>
+                                   <a class="dropdown-item" href="~/Job/ShowJob"><i class="fa fa-suitcase" aria-hidden="true"></i> job post </a>
+                                   <a class="dropdown-item" href="~/Login/SettingProfile"><i class="fa fa-cog" aria-hidden="true"></i> setting </a>
+                                   <a class="dropdown-item" href="~/Login/Logout"><i class="fa fa-sign-out"aria-hidden="true"></i> Logout</a>
+
+                                  </div>
+                                 </li>
+                                 
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+        }
+        }
+
     </header>
     <div class="container">
         <main role="main" class="pb-3">

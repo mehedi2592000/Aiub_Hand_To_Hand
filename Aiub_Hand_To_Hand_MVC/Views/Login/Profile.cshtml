@@ -1,8 +1,5 @@
 ﻿
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 
 
 @{
@@ -15,20 +12,19 @@
 
            </div>
            <div class="col-md-8">
-              <nav class="navbar navbar-expand-sm navbar-dark bg-light ">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <a class="navbar-brand" href="#">Home</a>
-                <a class="navbar-brand text-danger" href="#">OK</a>
+              <nav class="navbar navbar-expand-sm navbar-dark bg-success ">
+                <a class="navbar-brand" href="~/Login/Profile">Profile</a>
+                <a class="navbar-brand" href="~/Repository/ShowIndex">All Upload</a>
+                <a class="navbar-brand" href="~/Job/Index">Show Job</a>
+                <a class="navbar-brand" href="~/Home/Index">Graph</a>
+                
                 <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                     aria-expanded="false" aria-label="Toggle navigation"></button>
                 <div class="collapse navbar-collapse" id="collapsibleNavId">
                     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                         
                         
-                    <form class="form-inline my-2 my-lg-0 ">
-                        <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
+                   </ul>
                 </div>
             </nav>
 
@@ -42,27 +38,150 @@
     <div class="col-md-4">
          @foreach (Login teacher in teachers)
          {
-             <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="~/wwwroot/Pic/@teacher.Picture" alt="Card image cap Avatar">
+             <div class="card" style="width: 22rem;">
+            <img class="card-img-top rounded-circle" src="~/wwwroot/Pic/@teacher.Picture" alt="Card image cap Avatar" style="height:60vm">
+            
             <div class="card-body">
-            <p class="card-text">@teacher.Name
-            <br />
-            @teacher.Username</p>
-            </div>
+                <h5 class="card-title">@teacher.Name</h5>
+                <h6 class="card-subtitle mb-2 text-muted"> @teacher.Username</h6>
+            <!--
+                <a class="btn btn-primary btn-lg btn-block" style="background-color: #3b5998" href="~/Login/Edit" data-toggle="modal" data-target="#exampleModalCenter" role="button">
+            <i class="fa fa-user-plus me-2" aria-hidden="true"></i> Profile Pic Setting
+          </a>
+                -->    
+
+              
+
+                <div id="PlaceholderHere"></div>
+
+    
+                         <button type="button" class="btn btn-primary" data-toggle="ajax-modal" data-target="#addEmployee"
+                            data-url="@Url.Action($"Edit/{teacher.Id}")">Edit</button>
+
+
+
+              </div>
+
+
+
             </div>
          }
     </div>
 
+    <!--
+    <script>
+        $(function(){
+            var placeHolderElement = $('#PlaceHolderHere');
+            $('button[data-toggle="ajax-modal"]').click(function(event) {
+                var url = $(this).data('url');
+                var decoderUrl = decoderUrlComponent(url);
+                $.get(decoderUrl).done(function(data) {
+                    placeHolderElement.html(data);
+                    placeHolderElement.find('.modal').modal('show');
+                })
+            })
+
+            placeHolderElement.on('click', '[data-save="modal"]', function(event) {
+                event.preventDefault();
+
+                var form = $(this).parents('.modal').find('form');
+                var actionUrl = form.attr('action');
+                
+                var sendData = form.serialize();
+                $.post(actionUrl, sendData).done(function(data) {
+                    placeHolderElement.find('.modal').modal('hide');
+                })
+            })
+        })
+
+    </script>
+    -->
     <div class="col-md-8">
-        @foreach (Repository student in students)
+
+        <h1>Uploaded Subject Graph</h1><br />
+        <canvas class="justify-content-center" id="myChart" style="max-width:400px;max-height:430px;"></canvas>
+
+<script type="text/javascript">
+
+    $(function() 
+    {
+       
+           
+            
+             $.ajax
+             ({
+                type: "POST",
+                url: "/Home/Indexee",
+                data: "",
+                contextType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: OnSuccessResult,
+                error: onerror
+             });
+
+        function OnSuccessResult(data) {
+            var _data = data;
+            var _chartlables = _data[0];
+            var _charData = _data[1];
+
+            var barColor = ["red", "green", "blue", "orange"];
+
+            new Chart("myChart", {
+                //type: "bar",
+                type: "doughnut",
+                data: {
+                    labels: _chartlables,
+                    datasets: [{
+                        backgroundColor: barColor,
+                        data: _charData
+                    }]
+                }
+            });
+
+        }
+
+        function onerror(err) {
+
+        }
+    
+    });
+
+
+</script>
+
+
+
+        <h1>Uploaded Subject All</h1><br />
+
+        @foreach (Repository item in students)
         {
-            <div class="card w-100">
-             <div class="card-body">
-            <h5 class="card-title">@student.Title</h5>
-                <p class="card-text">@student.Subject</p>
-                <p class="card-text">@student.Status</p>           
-            </div>
-            </div>
+
+             <div class="card w-90">
+          <div class="card-body">
+            <h5 class="card-title"> @Html.DisplayFor(modelItem => item.Subject)
+            
+                 
+              <a class="btn btn-success float-right "@Html.ActionLink("GetPdf", "GetPdf","Repository", new { Pdf=item.Pdf })></a>
+              <a class="btn btn-primary float-right" href="~/PDF/@item.Pdf">Read now</a>
+            
+            </h5>
+            <p class="card-text">  @Html.DisplayFor(modelItem => item.Title)
+            <br />
+            Date: @Html.DisplayFor(modelItem => item.Date)
+            </p>
+            
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+      
         }
     </div>
 </div>

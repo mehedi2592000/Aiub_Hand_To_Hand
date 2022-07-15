@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Aiub_Hand_To_Hand_MVC.Models.Job>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+
+@foreach (var item in Model) {
+      
+    <div class="col-md-4">
+    <div class="card border-primary mb-3" style="max-width: 18rem;">
+           <div class="card-header">@Html.DisplayFor(modelItem => item.Depertment)</div>
+                <div class="card-body text-primary">
+                    <h5 class="card-title">@Html.DisplayFor(modelItem => item.Jobtitle)</h5>
+                        <p class="card-text"> @Html.DisplayFor(modelItem => item.Message)</p>
+
+                        <h4>Uploaded</h4>
+                        <p> @Html.DisplayFor(modelItem => item.DateNow)</p>
+                        <h4>Expired Date:</h4>
+                        <p> @Html.DisplayFor(modelItem => item.Exparied)</p>
+                </div>
+    </div>
+    
+    </div>
+    
+    
+    
+    
+    
+    
+}
+
+</div>

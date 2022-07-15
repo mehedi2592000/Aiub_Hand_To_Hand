@@ -22,6 +22,42 @@ namespace Aiub_Hand_To_Hand_MVC.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("Aiub_Hand_To_Hand_MVC.Models.Job", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime?>("DateNow")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Depertment")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("Exparied")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Jobtitle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("LoginId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LoginId");
+
+                    b.ToTable("Jobs");
+                });
+
             modelBuilder.Entity("Aiub_Hand_To_Hand_MVC.Models.Login", b =>
                 {
                     b.Property<int>("Id")
@@ -102,6 +138,17 @@ namespace Aiub_Hand_To_Hand_MVC.Migrations
                     b.ToTable("Repositories");
                 });
 
+            modelBuilder.Entity("Aiub_Hand_To_Hand_MVC.Models.Job", b =>
+                {
+                    b.HasOne("Aiub_Hand_To_Hand_MVC.Models.Login", "Login")
+                        .WithMany("Jobs")
+                        .HasForeignKey("LoginId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Login");
+                });
+
             modelBuilder.Entity("Aiub_Hand_To_Hand_MVC.Models.Repository", b =>
                 {
                     b.HasOne("Aiub_Hand_To_Hand_MVC.Models.Login", "Login")
@@ -115,6 +162,8 @@ namespace Aiub_Hand_To_Hand_MVC.Migrations
 
             modelBuilder.Entity("Aiub_Hand_To_Hand_MVC.Models.Login", b =>
                 {
+                    b.Navigation("Jobs");
+
                     b.Navigation("Repositories");
                 });
 #pragma warning restore 612, 618

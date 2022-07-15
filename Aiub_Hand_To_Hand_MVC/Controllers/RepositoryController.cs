@@ -35,8 +35,8 @@ namespace Aiub_Hand_To_Hand_MVC.Controllers
 
         public IActionResult ShowIndex(string name,string title)
         {
+            
 
-           
             List<Repository> logins = _db.RepositoryDataAccessFactory().GetAll();
             if(name!=null ||title!=null)
             {
@@ -50,6 +50,7 @@ namespace Aiub_Hand_To_Hand_MVC.Controllers
         {
             List<SelectListItem> cities = new()
             {
+                new SelectListItem { Value = "", Text = "None" },
                 new SelectListItem { Value = "COA", Text = "COA" },
                 new SelectListItem { Value = "DLC", Text = "DLC" },
                 new SelectListItem { Value = "MAth 5", Text = "MAth 5" },
@@ -83,7 +84,7 @@ namespace Aiub_Hand_To_Hand_MVC.Controllers
 
                 };
                 _db.RepositoryDataAccessFactory().Add(data);
-                return RedirectToAction("Index");
+                return RedirectToAction("Profile","Login");
             }
 
             return View("Create");
@@ -122,5 +123,16 @@ namespace Aiub_Hand_To_Hand_MVC.Controllers
             memory.Position = 0;
             return memory;
         }
+
+        public IActionResult DeleteRepo()
+        {
+            int dw = HttpContext.Session.GetInt32("Username1").Value;
+
+            List<Repository> logins = _db.RepositoryDataAccessFactory().GetAll().Where(x=>x.LoginId==dw).ToList();
+            return View(logins);
+
+        }
+
+
     }
 }

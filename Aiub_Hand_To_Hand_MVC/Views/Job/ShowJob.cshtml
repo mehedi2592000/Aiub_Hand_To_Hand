@@ -1,0 +1,105 @@
+﻿@model IEnumerable<Aiub_Hand_To_Hand_MVC.Models.Job>
+
+
+    
+
+
+
+
+       <div class="row">
+           
+           <div class="col-md-12">
+              <nav class="navbar navbar-expand-sm navbar-dark bg-success ">
+                <a class="navbar-brand" href="~/Login/Profile">Profile</a>
+                <a class="navbar-brand" href="~/Repository/ShowIndex">All Upload</a>
+                <a class="navbar-brand" href="~/Job/ShowJob">Show Job</a>
+                <a class="navbar-brand" href="~/Home/Index">Graph</a>
+
+                <a class="navbar-brand text-danger" href="#">OK</a>
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                    aria-expanded="false" aria-label="Toggle navigation"></button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        
+                        
+                    <form class="form-inline my-2 my-lg-0 ">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
+
+           </div>
+
+       </div>
+
+
+
+<div class="row">
+    
+
+    <div class="col-md-12">
+        <div class="row">
+           <div class="col-md-9">
+
+
+                @foreach (var item in Model) {
+
+
+                    <div class="card w-90">
+                      <div class="card-body">
+                        <h5 class="card-title"> @Html.DisplayFor(modelItem => item.Jobtitle)
+            
+                        </h5>
+                        <p class="card-text">  @Html.DisplayFor(modelItem => item.Depertment)
+                        <br />
+                        Message: @Html.DisplayFor(modelItem => item.Message)
+                        <br />
+                        Publication Date: @Html.DisplayFor(modelItem => item.DateNow)
+                        <br />
+                        Exparied Date: @Html.DisplayFor(modelItem => item.Exparied)
+                        </p>
+            
+                      </div>
+                    </div>
+
+
+       
+                }
+            </div>
+           <div class="col-md-3">
+               <div class="card border-success mb-3">
+                  <h5 class="card-header text-center text-success">Search Box</h5>
+                  <div class="card-body">
+                     @using (Html.BeginForm("ShowJob", "Job",FormMethod.Get))
+                                {
+                                    <input type="text" name="Depertment" placeholder="Enter Depertment name..."/><br/><br/>
+                                    <input type="datetime-local" name="DateNow" placeholder="Enter Publication Date ..."/><br/><br/>
+                                    
+                
+                                    <input type="submit" class="btn btn-primary" name="submit" value="Search"/>
+                                }
+                  </div>
+                </div>
+
+                       </p>
+            
+           </div>
+           
+        </div>
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+

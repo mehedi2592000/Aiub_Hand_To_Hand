@@ -1,5 +1,50 @@
 ﻿@model Aiub_Hand_To_Hand_MVC.Models.DataModel.LoginModel
 
+
+<div class="modal fade" id="addEmployee">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                
+            </div>
+
+            <div class="modal-body">
+                 <form asp-action="Edit" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+            <input type="hidden" asp-for="Id" class="form-control" />
+            <input type="hidden" asp-for="Gmail" class="form-control" />
+              <input type="hidden" asp-for="Instutue" class="form-control" />
+               <input type="hidden" asp-for="Username" class="form-control" />
+               <input type="hidden" asp-for="Password" class="form-control" />
+            
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+              
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Picture" class="control-label"></label>
+                <input type="file" asp-for="Picture" class="form-control" />
+                <span asp-validation-for="Picture" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" data-save="modal" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+            </div>
+
+             <div class="modal-footer">
+                
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--
 <h4>LoginModel</h4>
 <hr />
 <div class="row">
@@ -51,7 +96,7 @@
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
-
+-->
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

@@ -1,7 +1,12 @@
 ﻿@model Aiub_Hand_To_Hand_MVC.Models.Login
 
-<h4>Login</h4>
+
 <hr />
+@{
+    Layout="~/Views/Shared/_Settings.cshtml";
+}
+<!--
+
 <div class="row">
     <div class="col-md-4">
         <form asp-action="EditSetting">
@@ -47,10 +52,101 @@
         </form>
     </div>
 </div>
+-->
 
-<div>
-    <a asp-action="Index">Back to List</a>
+<div class="row">
+    <div class="col-md-3">
+    </div>
+        <div class="col-md-9">
+
+             <form asp-action="EditSetting">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+             
+                <input type="hidden" asp-for="Id" class="form-control" />
+             
+
+             <div class="card border-light " style="max-width: 30rem;">
+                <div class="card-header">
+                   <div class="form-group">
+                        <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+
+                   </div>
+                </div>
+            </div>
+
+             <div class="card border-light " style="max-width: 30rem;">
+                <div class="card-header">
+                   <div class="form-group">
+                        <label asp-for="Gmail" class="control-label"></label>
+                <input asp-for="Gmail" class="form-control" />
+                <span asp-validation-for="Gmail" class="text-danger"></span>
+
+                   </div>
+                </div>
+            </div>
+            
+             <div class="card border-light " style="max-width: 30rem;">
+                <div class="card-header">
+                   <div class="form-group">
+                        <label asp-for="Instutue" class="control-label"></label>
+                <input asp-for="Instutue" class="form-control" />
+                <span asp-validation-for="Instutue" class="text-danger"></span>
+
+                   </div>
+                </div>
+            </div>
+             
+
+             <div class="card border-light " style="max-width: 30rem;">
+                <div class="card-header">
+                   <div class="form-group">
+                         <label asp-for="Username" class="control-label"></label>
+                <input asp-for="Username" class="form-control" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+
+                   </div>
+                </div>
+            </div>
+             
+            
+             <div class="card border-light " style="max-width: 30rem;">
+                <div class="card-header">
+                   <div class="form-group">
+                        <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+
+                   </div>
+                </div>
+            </div>
+
+
+            
+                <input type="hidden" asp-for="Picture" class="form-control" />
+            
+            <div class="card border-light " style="max-width: 20rem;">
+                <div class="card-header">
+                   <div class="form-group">
+
+                         <input type="submit" value="Save" class="btn btn-primary" />
+                   </div>
+                </div>
+            </div>
+
+
+            </form>
+
+        </div>
 </div>
+
+
+
+
+
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

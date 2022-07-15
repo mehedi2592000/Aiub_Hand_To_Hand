@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5+VZX+ZjZZyrQlFf8zW1A9C0gNg2KcRekgIZTwx6usc=",
+  "Hash": "bxwL1whv0JLuTIru9sogWgkSMHxbtE/ZaC4fVMNSaIU=",
   "Source": "Aiub_Hand_To_Hand_MVC",
   "BasePath": "_content/Aiub_Hand_To_Hand_MVC",
   "Mode": "Default",
@@ -51,6 +51,40 @@
       "OriginalItemSpec": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Aiub_Hand_To_Hand_MVC.bundle.scp.css"
     },
     {
+      "Identity": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\css\\Hom.css",
+      "SourceId": "Aiub_Hand_To_Hand_MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\",
+      "BasePath": "_content/Aiub_Hand_To_Hand_MVC",
+      "RelativePath": "css/Hom.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Hom.css"
+    },
+    {
+      "Identity": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\css\\Job.css",
+      "SourceId": "Aiub_Hand_To_Hand_MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\",
+      "BasePath": "_content/Aiub_Hand_To_Hand_MVC",
+      "RelativePath": "css/Job.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Job.css"
+    },
+    {
       "Identity": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\css\\Login.css",
       "SourceId": "Aiub_Hand_To_Hand_MVC",
       "SourceType": "Discovered",
@@ -66,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Login.css"
+    },
+    {
+      "Identity": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\css\\Set.css",
+      "SourceId": "Aiub_Hand_To_Hand_MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\",
+      "BasePath": "_content/Aiub_Hand_To_Hand_MVC",
+      "RelativePath": "css/Set.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Set.css"
     },
     {
       "Identity": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\css\\site.css",
@@ -100,6 +151,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\js\\Modalee.js",
+      "SourceId": "Aiub_Hand_To_Hand_MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\",
+      "BasePath": "_content/Aiub_Hand_To_Hand_MVC",
+      "RelativePath": "js/Modalee.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Modalee.js"
     },
     {
       "Identity": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\js\\site.js",
@@ -1870,6 +1938,40 @@
       "OriginalItemSpec": "wwwroot\\PDF\\(L03) Introduction to Classification.pdf"
     },
     {
+      "Identity": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\PDF\\(L04) Using Dicision Trees for Classification (2).pdf",
+      "SourceId": "Aiub_Hand_To_Hand_MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\",
+      "BasePath": "_content/Aiub_Hand_To_Hand_MVC",
+      "RelativePath": "PDF/(L04) Using Dicision Trees for Classification (2).pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\PDF\\(L04) Using Dicision Trees for Classification (2).pdf"
+    },
+    {
+      "Identity": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\PDF\\(L04) Using Dicision Trees for Classification (3).pdf",
+      "SourceId": "Aiub_Hand_To_Hand_MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\",
+      "BasePath": "_content/Aiub_Hand_To_Hand_MVC",
+      "RelativePath": "PDF/(L04) Using Dicision Trees for Classification (3).pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\PDF\\(L04) Using Dicision Trees for Classification (3).pdf"
+    },
+    {
       "Identity": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\PDF\\(L04) Using Dicision Trees for Classification.pdf",
       "SourceId": "Aiub_Hand_To_Hand_MVC",
       "SourceType": "Discovered",
@@ -1885,6 +1987,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\PDF\\(L04) Using Dicision Trees for Classification.pdf"
+    },
+    {
+      "Identity": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\PDF\\(L05) Decision Tree Induction - Entropy.pdf",
+      "SourceId": "Aiub_Hand_To_Hand_MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\",
+      "BasePath": "_content/Aiub_Hand_To_Hand_MVC",
+      "RelativePath": "PDF/(L05) Decision Tree Induction - Entropy.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\PDF\\(L05) Decision Tree Induction - Entropy.pdf"
     },
     {
       "Identity": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\PDF\\First (1).pdf",
@@ -1955,6 +2074,40 @@
       "OriginalItemSpec": "wwwroot\\PDF\\First (4).pdf"
     },
     {
+      "Identity": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\PDF\\First (6).pdf",
+      "SourceId": "Aiub_Hand_To_Hand_MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\",
+      "BasePath": "_content/Aiub_Hand_To_Hand_MVC",
+      "RelativePath": "PDF/First (6).pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\PDF\\First (6).pdf"
+    },
+    {
+      "Identity": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\PDF\\First (8).pdf",
+      "SourceId": "Aiub_Hand_To_Hand_MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\",
+      "BasePath": "_content/Aiub_Hand_To_Hand_MVC",
+      "RelativePath": "PDF/First (8).pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\PDF\\First (8).pdf"
+    },
+    {
       "Identity": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\PDF\\First.pdf",
       "SourceId": "Aiub_Hand_To_Hand_MVC",
       "SourceType": "Discovered",
@@ -1970,6 +2123,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\PDF\\First.pdf"
+    },
+    {
+      "Identity": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\PDF\\Mehedi_Hasan.pdf",
+      "SourceId": "Aiub_Hand_To_Hand_MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\",
+      "BasePath": "_content/Aiub_Hand_To_Hand_MVC",
+      "RelativePath": "PDF/Mehedi_Hasan.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\PDF\\Mehedi_Hasan.pdf"
     },
     {
       "Identity": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\Pic\\3.jpg",
@@ -2074,6 +2244,23 @@
       "OriginalItemSpec": "wwwroot\\Pic\\e.jpg"
     },
     {
+      "Identity": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\Pic\\hero-img.png",
+      "SourceId": "Aiub_Hand_To_Hand_MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\",
+      "BasePath": "_content/Aiub_Hand_To_Hand_MVC",
+      "RelativePath": "Pic/hero-img.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Pic\\hero-img.png"
+    },
+    {
       "Identity": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\Pic\\logo.jpg",
       "SourceId": "Aiub_Hand_To_Hand_MVC",
       "SourceType": "Discovered",
@@ -2106,6 +2293,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Pic\\logo1.jpg"
+    },
+    {
+      "Identity": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\Pic\\oop.png",
+      "SourceId": "Aiub_Hand_To_Hand_MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Project\\Project_In_Dot_net_and_Core\\Aiub_Hand_To_Hand_MVC\\Aiub_Hand_To_Hand_MVC\\wwwroot\\",
+      "BasePath": "_content/Aiub_Hand_To_Hand_MVC",
+      "RelativePath": "Pic/oop.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Pic\\oop.png"
     }
   ]
 }

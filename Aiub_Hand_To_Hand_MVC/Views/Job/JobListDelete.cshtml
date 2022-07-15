@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Aiub_Hand_To_Hand_MVC.Models.Job>
+
+@{
+    Layout="~/Views/Shared/_Settings.cshtml";
+}
+<table class="table table table-striped">
+    <thead>
+        <tr>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.Depertment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Jobtitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Message)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateNow)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Exparied)
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Depertment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Jobtitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Message)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateNow)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Exparied)
+            </td>
+            
+            <td>
+               
+               
+
+               <button class="btn btn-danger">@Html.ActionLink("Delete", "Delete", new {  id=item.Id  })</button>
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

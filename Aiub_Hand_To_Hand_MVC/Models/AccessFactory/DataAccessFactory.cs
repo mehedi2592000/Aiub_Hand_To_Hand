@@ -28,5 +28,10 @@ namespace Aiub_Hand_To_Hand_MVC.Models.AccessFactory
             return new CheckRepo(_context);
         }
 
+        public IRrepository<Job,int> JobDataAccess()
+        {
+            return new JobRepo(_context);
+        }
+
     }
 }
